@@ -26,14 +26,14 @@ client = openai
 
 #load_dotenv()
 try:
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    ASSISTANT_ID = os.getenv("ASSISTANT_ID")
+    OPENAI_API_KEY = "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"
+    ASSISTANT_ID = "asst_whfriR25zC3TneZFlvlOZlDY"
     FILE_ID_DB = os.getenv("FILE_ID_DB")
     PROJECT_ID = os.getenv("PROJECT_ID")
     USER = os.getenv("USER")
     PASSWORD = os.getenv("PASSWORD")    
 except:
-    OPENAI_API_KEY = "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"
+    OPENAI_API_KEY = "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"
     ASSISTANT_ID = "asst_whfriR25zC3TneZFlvlOZlDY"
     FILE_ID_DB = st.secrets["FILE_ID_DB"]
     PROJECT_ID = st.secrets["PROJECT_ID"]
