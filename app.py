@@ -33,6 +33,8 @@ try:
     USER = os.getenv("USER")
     PASSWORD = os.getenv("PASSWORD")    
 except:
+    OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+    ASSISTANT_ID = st.secrets["ASSISTANT_ID"]
     FILE_ID_DB = st.secrets["FILE_ID_DB"]
     PROJECT_ID = st.secrets["PROJECT_ID"]
     USER = st.secrets["USER"]
