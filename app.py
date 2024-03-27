@@ -25,12 +25,12 @@ import sqlite3
 client = openai
 
 #load_dotenv()
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-ASSISTANT_ID = os.getenv('ASSISTANT_ID')
-FILE_ID_DB = os.getenv('FILE_ID_DB')
-PROJECT_ID = os.getenv('PROJECT_ID')
-USER = os.getenv('USER')
-PASSWORD = os.getenv('PASSWORD')  
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+ASSISTANT_ID = st.secrets["ASSISTANT_ID"]
+FILE_ID_DB = st.secrets["FILE_ID_DB"]
+PROJECT_ID = st.secrets["PROJECT_ID"]
+USER = st.secrets["USER"]
+PASSWORD = st.secrets["PASSWORD"]    
 
 # Inicializar la API de OpenAI, dandole la llave de la API
 openai.api_key = OPENAI_API_KEY
