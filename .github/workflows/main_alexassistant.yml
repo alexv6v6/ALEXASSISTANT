@@ -1,9 +1,9 @@
+name: Build and deploy Python app to Azure Web App - alexassistant
+
 env:
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
   ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
   
-name: Build and deploy Python app to Azure Web App - alexassistant
-
 on:
   push:
     branches:
