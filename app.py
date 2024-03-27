@@ -26,15 +26,15 @@ client = openai
 
 #load_dotenv()
 try:
-    OPENAI_API_KEY = ${{secrets.OPENAI_API_KEY}}
-    ASSISTANT_ID = ${{secrets.ASSISTANT_ID}}
+    OPENAI_API_KEY = ${{ secrets.OPENAI_API_KEY }}
+    ASSISTANT_ID = ${{ secrets.ASSISTANT_ID }}
     FILE_ID_DB = os.getenv("FILE_ID_DB")
     PROJECT_ID = os.getenv("PROJECT_ID")
     USER = os.getenv("USER")
     PASSWORD = os.getenv("PASSWORD")    
 except:
-    OPENAI_API_KEY = ${{secrets.OPENAI_API_KEY}}
-    ASSISTANT_ID = ${{secrets.ASSISTANT_ID}}
+    OPENAI_API_KEY = ${{ secrets.OPENAI_API_KEY }}
+    ASSISTANT_ID = ${{ secrets.ASSISTANT_ID }}
     FILE_ID_DB = st.secrets["FILE_ID_DB"]
     PROJECT_ID = st.secrets["PROJECT_ID"]
     USER = st.secrets["USER"]
