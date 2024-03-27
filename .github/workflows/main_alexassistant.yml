@@ -3,6 +3,9 @@
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
 name: Build and deploy Python app to Azure Web App - alexassistant
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
 
 on:
   push:
@@ -10,10 +13,6 @@ on:
       - main
   workflow_dispatch:
   
-env:
-  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -46,6 +45,8 @@ jobs:
           path: |
             release.zip
             !venv/
+      - name: Print name APIKEY
+        run: echo "Hello $NAME. $BUILD. Using Java Version $OPENAI_API_KEY"
 
   deploy:
     runs-on: ubuntu-latest
