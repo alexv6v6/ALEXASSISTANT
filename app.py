@@ -26,8 +26,8 @@ client = openai
 
 #load_dotenv()
 try:
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    ASSISTANT_ID = os.getenv("ASSISTANT_ID")
+    OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+    ASSISTANT_ID = os.environ["ASSISTANT_ID"]
     FILE_ID_DB = os.getenv("FILE_ID_DB")
     PROJECT_ID = os.getenv("PROJECT_ID")
     USER = os.getenv("USER")
