@@ -9,6 +9,10 @@ on:
     branches:
       - main
   workflow_dispatch:
+  
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
 
 jobs:
   build:
